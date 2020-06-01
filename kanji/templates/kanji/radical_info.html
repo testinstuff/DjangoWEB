@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<link rel="stylesheet" href="{%static 'kanji/style.css'%}">
+
+{% block content %}
+<p class="hiragana">{{radical_info.radical}} - {{radical_info.radical_name}}</p>
+<hr/>
+<div class="story">
+  <h4> How to remember it? </h4>
+<p class="story_kanji">{{radical_info.description}}</p></div>
+<hr/>
+<div class="example">
+  <h4> Some example kanji using this radical: </h4>
+  {%for kanji in kanji_associated%}
+  <div class="box">
+    <p class="item"><a  class="font_link"href="/{{kanji.id}}/">{{kanji.hiragana}}</a></p></div>
+    {%endfor%}
+{% endblock %}

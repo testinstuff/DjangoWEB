@@ -1,0 +1,78 @@
+{% load static %}
+<html>
+<head>
+  <link rel="stylesheet" href="{%static 'kanji/style.css'%}">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<nav class="navbar">
+  <ul>
+    <li><a href="/login/">Sign In</a></li>
+    <li><a href="/register/">Register</a></li>
+    <li><a href="/studyradicals/">Study Radicals</a></li>
+    <li><a href="/studyn5/">Study Kanji N5</a></li>
+    <li><a href="#">Study Kanji N4</a></li>
+    <li style="float:left"><a class="webname" href="/">Kanji Project Site</a></li>
+
+  </ul>
+</nav>
+{% block content %}
+<div class="container">
+  <h4> I decided to create kanji website for self learning purposes someday i might post it online for other to learn also I will later introduce signing in and register system to progress learning via inside apps.</h4>
+  <div class="add_item">
+    <h3>There will be an Kanji Add function</h3>
+    <form action ="add_kanji/" method="post">
+   <input type="text" name="content" class="input_text"  placeholder="Input here." required>
+   <button type="submit" class="button_sub">Add</button>
+
+   <select name="radical" class="select_op">
+  <option value="Radical">Radical</option>
+  <option value="N5">N5</option>
+  <option value="N5">N4</option>
+  </select>
+
+   </form>
+  </div>
+<div class="searchbar">
+  <h3>There will be an searchbar...</h3>
+  <form action='' method="GET">
+ <input type="text" name="q" class="search"  placeholder="Input here.">
+ <button type="submit" class="button_sub">Search</button>
+ </form>
+</div>
+<h4>Kanji Radicals </h4>
+<div class="kanji_rad">
+<p> There will be a list of kanji radicals to go through and neumonics assigned to them.</p>
+{%for radical in radicals_list%}
+  <div class="box_radical">
+    <p class="item"><a class="font_link" href="/radical/{{radical.id}}">{{radical.radical}}</a></p></div>
+{%endfor%}
+</div>
+<h4>Kanji Level N5</h4>
+<div class="kanji_disp">
+{% for kanji in kanji_list%}
+<div class="box">
+  <p class="item"><a class="font_link" href="/{{kanji.id}}/">{{kanji.hiragana}}</a></p></div>
+  <!-- <form action="delete_kanji/{{kanji.id}}" class="form_t">
+  <button type="submit" class="button_del">Delete</button>
+</form> -->
+{%endfor%}
+</div>
+
+<h4> Kanji Level N4</h4>
+<div class="kanji_disp">
+  <p>There will be an list of N4 LEVEL kanji continuation of the previous chapter.
+</div>
+
+
+{%endblock%}
+<div class="footer">
+  <div class="footer-section-about">
+  </div>
+</div>
+      </body>
+</html>

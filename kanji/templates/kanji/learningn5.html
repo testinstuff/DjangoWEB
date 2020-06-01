@@ -1,0 +1,34 @@
+{%load static%}
+<html>
+<head>
+  <script type="text/javascript" src="{%static 'kanji/testing.js'%}"></script>
+  <link rel="stylesheet" href="{%static 'kanji/style2.css'%}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+  <body>
+    <a href="/studyn5/" class="fas fa-arrow-left fa-lg">Go Back</a>
+
+    <center>
+    <h1><span id="score"></span></h1>
+    <h1><span id="score2"></span></h1>
+    <div class="box">
+      <p class="item"><a style="color:white;">{{kanji_n5.hiragana}}</a></p></div>
+    <form onsubmit="return Test('{{kanji_n5.translation}}')" method="POST" name="coward" class="form_test">
+      <div class="form-group col-md-6">
+      <input type="text" id="amm" class="form-control"  placeholder="Input here." autocomplete="off"></div>
+    <button type="submit" class="btn btn-success">Check</button>
+    </form>
+    <p class="hiragana">{{kanji_n5.hiragana}} - {{kanji_n5.translation}}</p>
+    <hr/>
+    <div class="story">
+        <h4> How to remember it? </h4>
+      <p class="story_kanji">{{kanji_n5.story}}</p></div>
+    <hr/>
+    <div class="example">
+      <h4> Some example words using this kanji: </h4>
+    <pre class="testing_this">{{ kanji_n5.example_words}}</pre></div>
+
+      </center>
+    </body>
+    </html>

@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block content%}
+<h4>Kanji Radicals </h4>
+<div class="kanji_rad">
+<p> There will be a list of kanji radicals to go through and neumonics assigned to them.</p>
+{%for radicals in radicals_list%}
+  <div class="box_radical">
+    <p class="item"><a class="font_link" href="{% url 'details_radical' radicals.id  %}">{{radicals.radical}}</a></p></div>
+{%endfor%}
+{%for radical in radical_info%}
+<p class="hiragana">{{radical.radical}} - {{radical.radical_name}}</p>
+<hr/>
+<div class="story">
+  <h4> How to remember it? </h4>
+<p class="story_kanji">{{radical.description}}</p></div>
+<hr/>
+<div class="example">
+{%endfor%}
+  <h4> Some example kanji using this radical: </h4>
+  {%for kanji in kanji_associated%}
+  <div class="box">
+    <p class="item"><a  class="font_link"href="{% url 'details' kanji.id  %}">{{kanji.hiragana}}</a></p></div>
+    {%endfor%}
+{%endblock%}

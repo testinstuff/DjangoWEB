@@ -1,0 +1,224 @@
+body{
+  background-color: #FFFFFF;
+  margin:0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family:sans-serif;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+h4{
+  font-family: sans-serif;
+  font-size:25px;
+}
+.webname{
+  font-family:sans-serif;
+  font-size:28px;
+}
+
+.navbar{
+  display:inline;
+}
+
+.menu{
+   display:inline-block;
+    float:right;
+}
+
+.menu-item{
+  float:right;
+  color: black;
+
+}
+
+.container{
+  height:100%;
+
+}
+
+.searchbar{
+  margin-bottom:3%;
+  margin-top:3%;
+
+}
+
+.kanji_disp{
+  margin-top:25px;
+
+}
+.add_item{
+  margin-top:3%;
+  margin-bottom:3%;
+
+}
+.test_class{
+  font-size:25px;
+}
+
+
+.item{
+  display:inline;
+  color:#181818;
+  font-size:50px;
+  margin-left:2%;
+
+}
+
+.input_text{
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size:25px;
+}
+.button_sub{
+transition-duration: 0.4s;
+background-color: #008CBA; /* Green */
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 25px;
+}
+
+.search{
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size:25px;
+}
+
+.form_t{
+  display:inline-block;
+}
+
+.button_del{
+  margin-left:25%;
+  transition-duration: 0.4s;
+  background-color: #008CBA; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+}
+
+.button_del:hover{
+  background-color: #f44336; /* red */
+color: white;
+}
+
+a{
+  text-decoration: none;
+  color:#181818;
+}
+
+.box{
+  display:inline-block;
+  margin-left:2%;
+  margin-top:2%;
+  outline-style: solid;
+  background-color:#1A659E;
+  box-shadow: 0px 0px 5px 5px #000000;
+  text-shadow: 1px 1px 2px #000000
+
+}
+.box_radical{
+  display:inline-block;
+  margin-left:2%;
+  margin-top:2%;
+  outline-style: solid;
+  background-color:#004E89;
+  box-shadow: 0px 0px 5px 5px #000000;
+  text-shadow: 1px 1px 2px #000000
+}
+
+
+.hiragana{
+  font-size:90px;
+  font-family:sans-serif;
+}
+.main{
+}
+.translate{
+  display:inline-block;
+  font-size:45px;
+  font-family: sans-serif;
+}
+.story_kanji{
+  font-size:25px;
+  font-family:sans-serif;
+}
+
+.example_words{
+  font-size:25px;
+  font-family: sans-serif;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+.testing_this{
+  font-size:25px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.font_link{
+  color:white;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  text-align: center;
+}
+
+
+
+.study_this{
+  margin-top:3%;
+  margin-bottom:3%;
+}
+/* The container must be positioned relative: */
+.select_op{
+  display: block;
+     font-size: 16px;
+     font-family: sans-serif;
+     font-weight: 700;
+     color: #444;
+     line-height: 1.3;
+     padding: .6em 1.4em .5em .8em;
+     width: 20%;
+     max-width: 20%; /* useful when width is set to */
+
+}

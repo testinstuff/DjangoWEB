@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{%static 'kanji/style.css'%}">
+
+{% block content %}
+<a href="/">Back</a>
+<hr/>
+<p class="hiragana">{{context.hiragana}} - {{context.translation}}</p>
+<hr/>
+<div class="story">
+  <h4> How to remember it? </h4>
+<p class="story_kanji">{{context.story}}</p></div>
+<hr/>
+<div class="example">
+  <h4> Some example words using this kanji: </h4>
+<pre class="testing_this">{{ context.example_words}}</pre></div>
+{% endblock %}

@@ -1,0 +1,58 @@
+body{
+  background-color: #F3F3F3;
+}
+.box{
+  margin-top:5%;
+  outline-style: solid;
+  background-color:#1A659E;
+  box-shadow: 0px 0px 5px 5px #000000;
+  text-shadow: 1px 1px 2px #000000
+}
+.item{
+  display:inline;
+  color:#181818;
+  font-size:75px;
+}
+
+.font_link{
+  color:white;
+}
+
+.form_test{
+  margin-top:2%;
+}
+
+.hiragana{
+  font-size:45px;
+  font-family:sans-serif;
+}
+
+.story_kanji{
+  font-size:25px;
+  font-family:sans-serif;
+}
+
+.testing_this{
+  font-size:25px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#score{
+  color:green;
+}
+
+#score2{
+  color:red;
+}
+
+.fa-arrow-left{
+  position:relative;
+  margin-top:2%;
+  color:black;
+  text-decoration: none;
+  font-family:sans-serif;
+}
+.fa-arrow-left:hover{
+  text-decoration: none;
+}

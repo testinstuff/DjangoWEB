@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block content%}
+<h4>Kanji Level N5</h4>
+<a href="{% url 'learnN5' %}">Learn Here</a>
+<div class="kanji_disp">
+{% for kanji in kanji_n5%}
+<div class="box">
+  <p class="item"><a class="font_link" href="{% url 'details' kanji.id  %}">{{kanji.hiragana}}</a></p></div>
+{%endfor%}
+</div>
+{% for item in details%}
+<p class="hiragana">{{item.hiragana}} - {{item.translation}}</p>
+<hr/>
+<div class="story">
+  <h4> How to remember it? </h4>
+<p class="story_kanji">{{item.story}}</p></div>
+<hr/>
+<div class="example">
+  <h4> Some example words using this kanji: </h4>
+<pre class="testing_this">{{ item.example_words}}</pre></div>
+  {%endfor%}
+{%for radical in radical_associated%}
+<div class="box">
+  <p class="item"><a class="font_link" href="{% url 'details_radical' radical.id  %}">{{radical.radical}}</a></p></div>
+  {%endfor%}
+{%endblock%}
